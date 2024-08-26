@@ -1,0 +1,154 @@
+#background {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
+  
+  .image {
+    width: 40vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image[data-status="inactive"] {
+    display: none;
+  }
+  
+  .image[data-status="active"] {
+    display: block;
+  }
+
+  
+  .opaque {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+#menu {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%);
+  z-index: 999;
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+}
+#plus {
+  cursor: pointer;
+  
+  
+}
+
+#darkmode {
+  display: flex;
+  margin-left: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+#modal-container{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+}
+
+#modal {
+display: none;
+position: fixed;
+z-index: 99999;
+flex-direction: column;
+border-radius: 8px;
+border: 1px solid black;
+background-color: white;
+color: black;
+box-shadow: 0 4px 23px 0 rgba(0,0,0,.2);
+width: 90%;
+max-height: 70%;
+max-width: 450px;
+padding: 2em;
+font-size: 0.7em;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+#modal span {
+  font-size: 1.5em;
+}
+
+#speed {
+  margin-left: 15px;
+  margin-bottom: 4px;
+  display: none;
+}
+#slider {
+  margin-bottom: 5px;
+  display: none;
+  
+}
+
+#sun {
+  margin-bottom: 4px;
+  display: none;
+}
+
+#moon {
+  margin-bottom: 4px;
+}
+
+ .active {
+  width: 60vmin;
+  z-index: 999;
+  animation: move-to-center 0.5s ease-out forwards;
+}
+
+.opaque {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+}
+
+@keyframes move-to-center {
+  0% {
+    transform: scale(1.5);
+    z-index: 999;
+  }
+  100% {
+    transform: scale(4);
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+} 
+
+/* #modal-container{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1500;
+  width: 100%;
+  height: 100%;
+  }
+
+  #modal {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    box-shadow: 0 4px 23px 0 rgba(0,0,0,.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    } */
