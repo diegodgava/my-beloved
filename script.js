@@ -17,7 +17,7 @@ const distanceFromLast = (x, y) => {
   return Math.hypot(x - last.x, y - last.y);
 }
 
-let controle = 25
+let controle = 20;
 const handleOnMove = e => {
   const slider = document.getElementById('slider');
   const sliderValue = slider.value;
